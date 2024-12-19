@@ -1,0 +1,489 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #333;
+    padding: 20px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+#hamburger-nav {
+    display: none; /* Initially hidden */
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.menu-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.menu-links a:hover {
+    color: #ccc;
+}
+
+.menu-links.show {
+    display: block;
+}
+
+/* Main Layout */
+main {
+    padding: 30px;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+section {
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Media Queries */
+
+/* Show hamburger menu on small screens */
+@media (max-width: 1200px) {
+    #hamburger-nav {
+        display: block; /* Show hamburger button */
+    }
+    .nav-links {
+        display: none; /* Hide the nav links */
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger-icon {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu-links.show {
+        display: block;
+    }
+
+    .menu-links a {
+        font-size: 1.2rem;
+        padding: 12px 0;
+    }
+
+    /* Adjust the space around links in mobile view */
+    .nav-links li {
+        margin-right: 0;
+    }
+}
+
+/* Mobile Screens (Phones) */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust logo size */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .menu-links a {
+        font-size: 1rem;
+        padding: 8px 0;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .social-links ul {
+        padding: 0;
+    }
+
+    .social-links li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+/* For very small screens like mobile phones in portrait */
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+
+    .hamburger-menu {
+        gap: 3px;
+    }
+}
+
+/* Adjust the icon size in contact page */
+.social-links img {
+    width: 25px; /* Set a smaller width for the icons */
+    height: 25px; /* Set a smaller height for the icons */
+    margin-right: 10px; /* Adjust the space between the icon and text */
+    vertical-align: middle; /* Align the icon vertically in the middle of the text */
+}
+
+.social-links a {
+    display: flex;
+    align-items: center; /* Vertically align the icon and text */
+    font-size: 1rem; /* Adjust the font size of the text */
+}
+
+.social-links li {
+    margin-bottom: 10px; /* Add space between each list item */
+}
+
+/* Ensure icons are displayed in a row and centered */
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    gap: 20px; /* Space between each social icon */
+}
+
+.social-links li {
+    margin-right: 20px; /* Space between each social icon */
+}
+
+.social-links img {
+    width: 25px; /* Icon size */
+    height: 25px; /* Icon size */
+    vertical-align: middle; /* Align icon vertically with text */
+}
+
+.social-links a {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    font-size: 1rem; /* Adjust font size of text */
+}
+
+.social-links li:last-child {
+    margin-right: 0; /* Remove the margin for the last list item */
+}
+
+/* Style for the "Connect with me" text */
+.social-links h3 {
+    text-align: center; /* Center the text */
+    font-size: 2rem; /* Increase the font size */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Optional: Set a color for the text */
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #333;
+    padding: 20px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Mobile Menu (Initially Hidden) */
+#hamburger-nav {
+    display: none;
+}
+
+#mobile-nav {
+    display: none;
+}
+
+/* Media Queries */
+
+/* Mobile and Tablet Screens */
+@media (max-width: 1024px) {
+    /* Hide desktop navigation */
+    #desktop-nav {
+        display: none;
+    }
+
+    /* Show hamburger menu and mobile nav */
+    #hamburger-nav {
+        display: block;
+    }
+
+    /* Show mobile dropdown menu */
+    #mobile-nav {
+        display: block;
+    }
+
+    /* Style for hamburger icon */
+    .hamburger-icon {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+}
+
+/* For very small screens like mobile phones in portrait (<= 480px) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* CSS for Profile Picture */
+.profile-picture {
+    text-align: center; /* Center the profile picture */
+    margin-bottom: 20px; /* Space between the picture and text */
+}
+
+.profile-picture img {
+    width: 200px; /* Size of the image */
+    height: 200px; /* Size of the image */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Ensure the image covers the circle without distortion */
+    border: 4px solid #333; /* Border around the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for effect */
+}
+
+/* Adjust the profile picture on mobile */
+@media screen and (max-width: 768px) {
+    .profile-picture img {
+        width: 150px; /* Adjust size on mobile */
+        height: 150px; /* Adjust size on mobile */
+    }
+}

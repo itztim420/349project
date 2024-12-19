@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Timothy Bui</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body style="background: url('assets/patagonia.avif') no-repeat center center fixed; background-size: cover; margin: 0; font-family: 'Poppins', sans-serif;">
+    <header>
+        <nav id="desktop-nav">
+            <div class="logo">Timothy Bui</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="skills.html">Skills</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger icon for mobile -->
+        <div id="hamburger-nav" class="hamburger-menu" onclick="toggleMenu()">
+            <div class="hamburger-icon"></div>
+            <div class="hamburger-icon"></div>
+            <div class="hamburger-icon"></div>
+        </div>
+
+        <!-- Mobile Menu Links -->
+        <div id="mobile-menu" class="menu-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="skills.html">Skills</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="profile-picture">
+                <img src="/assets/tim.JPG" alt="Timothy Bui" />
+            </div>
+            <h1>Hello my name is Timothy Bui</h1>
+            <p>I'm a passionate web developer who loves to build clean, responsive websites. I love to code!</p>
+            <a href="projects.html" class="btn">Check My Projects</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

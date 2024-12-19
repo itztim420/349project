@@ -1,0 +1,99 @@
+/* Mobile Styles (<= 768px) */
+@media screen and (max-width: 768px) {
+    /* Adjust logo size */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    /* Hide nav links on mobile, use hamburger menu */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        display: none; /* Hide nav links by default */
+    }
+
+    /* Show hamburger menu */
+    #hamburger-nav {
+        display: block; /* Show hamburger icon */
+    }
+
+    /* Dropdown menu */
+    .dropdown-content {
+        display: none; /* Hide dropdown by default */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Show the dropdown menu when toggled */
+    .dropdown-content.show {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        color: black;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+}
+
+/* Tablet Styles (<= 1024px) */
+@media screen and (max-width: 1024px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    /* Adjust navbar items for tablets */
+    .nav-links {
+        gap: 15px;
+    }
+
+    /* Main section padding adjustment for tablets */
+    main {
+        padding: 20px;
+    }
+
+    /* Hide dropdown menu on larger screens */
+    #mobile-nav {
+        display: block;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+}
+
+/* Desktop Styles (> 1200px) */
+@media screen and (min-width: 1201px) {
+    .logo {
+        font-size: 2rem; /* Increase logo size on large screens */
+    }
+
+    .nav-links {
+        gap: 25px;
+        display: flex; /* Display nav links horizontally on large screens */
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    /* Hide the hamburger and dropdown on desktop */
+    #hamburger-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+}
