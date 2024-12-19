@@ -1,26 +1,23 @@
-/* Mobile Styles (<= 768px) */
+
 @media screen and (max-width: 768px) {
-    /* Adjust logo size */
+
     .logo {
         font-size: 1.5rem;
     }
 
-    /* Hide nav links on mobile, use hamburger menu */
     .nav-links {
         flex-direction: column;
         gap: 10px;
         text-align: center;
-        display: none; /* Hide nav links by default */
+        display: none; 
     }
 
-    /* Show hamburger menu */
     #hamburger-nav {
-        display: block; /* Show hamburger icon */
+        display: block; 
     }
 
-    /* Dropdown menu */
     .dropdown-content {
-        display: none; /* Hide dropdown by default */
+        display: none; 
         position: absolute;
         top: 50px;
         right: 0;
@@ -30,7 +27,6 @@
         z-index: 1;
     }
 
-    /* Show the dropdown menu when toggled */
     .dropdown-content.show {
         display: block;
     }
@@ -47,23 +43,19 @@
     }
 }
 
-/* Tablet Styles (<= 1024px) */
 @media screen and (max-width: 1024px) {
     .logo {
         font-size: 1.8rem;
     }
 
-    /* Adjust navbar items for tablets */
     .nav-links {
         gap: 15px;
     }
 
-    /* Main section padding adjustment for tablets */
     main {
         padding: 20px;
     }
 
-    /* Hide dropdown menu on larger screens */
     #mobile-nav {
         display: block;
     }
@@ -73,22 +65,20 @@
     }
 }
 
-/* Desktop Styles (> 1200px) */
 @media screen and (min-width: 1201px) {
     .logo {
-        font-size: 2rem; /* Increase logo size on large screens */
+        font-size: 2rem; 
     }
 
     .nav-links {
         gap: 25px;
-        display: flex; /* Display nav links horizontally on large screens */
+        display: flex; 
     }
 
     main {
         padding: 40px;
     }
 
-    /* Hide the hamburger and dropdown on desktop */
     #hamburger-nav {
         display: none;
     }
